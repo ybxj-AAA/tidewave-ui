@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tidewave UI — A calm design system for product teams</title>
-<meta name="description" content="Tidewave UI is a dependency-free design system: 24 tokens, 18 components, light/dark themes, and four ready-made page templates.">
+<title>Tidewave UI — Design system and interface kit for product teams</title>
+<meta name="description" content="Tidewave UI is a dependency-free design system built on CSS custom properties: 24 design tokens, 18 components, light and dark themes, and four page templates.">
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/components.css">
@@ -43,15 +43,40 @@
 
 <section class="tw-page-hero">
   <div class="tw-container">
-    <span class="tw-badge tw-badge--brand"><span class="tw-badge__dot"></span>v1.0 · 24 tokens · 18 components</span>
-    <h1 style="margin-top:16px">A design system that gets out of the way.</h1>
-    <p>Tidewave is a dependency-free UI kit built on CSS custom properties. Ship a polished product UI in an afternoon — then re-theme the whole thing by editing one file.</p>
+    <span class="tw-badge tw-badge--brand"><span class="tw-badge__dot"></span>Version 1.0 · 24 design tokens · 18 components · 4 page templates</span>
+    <h1 style="margin-top:16px">A design system for product interfaces.</h1>
+    <p>Tidewave UI provides 24 design tokens, 18 components and four page templates for building product interfaces in plain HTML and CSS. It has no dependencies and requires no build step: include the stylesheets, apply the component classes, and ship. All visual styling is expressed as CSS custom properties, so retheming the kit means editing one file.</p>
     <div class="tw-row" style="margin-top:28px">
-      <a class="tw-btn tw-btn--primary tw-btn--lg" href="#get">Buy the kit — $39</a>
-      <a class="tw-btn tw-btn--lg" href="dashboard.html">See a live template</a>
+      <a class="tw-btn tw-btn--primary tw-btn--lg" href="#get">Buy the kit for $39</a>
+      <a class="tw-btn tw-btn--lg" href="dashboard.html">View a page template</a>
     </div>
   </div>
 </section>
+
+<div class="tw-container" style="padding-top:36px">
+  <div class="tw-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+    <article class="tw-card">
+      <h5 style="margin-bottom:6px">24 design tokens</h5>
+      <p class="tw-text-sm" style="margin:0">Colour, typography, spacing, radius, shadow and motion values are defined once and referenced throughout the kit.</p>
+    </article>
+    <article class="tw-card">
+      <h5 style="margin-bottom:6px">18 components</h5>
+      <p class="tw-text-sm" style="margin:0">Buttons, badges, cards, form controls, avatars, tables, progress, alerts, tabs, modals, tooltips and skeletons.</p>
+    </article>
+    <article class="tw-card">
+      <h5 style="margin-bottom:6px">4 page templates</h5>
+      <p class="tw-text-sm" style="margin:0">Dashboard, portfolio, SaaS landing and pricing pages, each assembled from the same component set.</p>
+    </article>
+    <article class="tw-card">
+      <h5 style="margin-bottom:6px">No build step</h5>
+      <p class="tw-text-sm" style="margin:0">Plain HTML and CSS with one optional JavaScript file. The kit is added to any project without a toolchain.</p>
+    </article>
+    <article class="tw-card">
+      <h5 style="margin-bottom:6px">Light and dark themes</h5>
+      <p class="tw-text-sm" style="margin:0">Both themes ship in the token file. The theme can be set per page or per container with a single attribute.</p>
+    </article>
+  </div>
+</div>
 
 <div class="tw-container tw-docs">
 
@@ -78,7 +103,7 @@
 
     <section id="buttons">
       <h2>Buttons</h2>
-      <p class="tw-text-muted">Six variants, three sizes, full disabled state. Every button is a single class — no wrapper markup required.</p>
+      <p class="tw-text-muted">Six variants in three sizes, including a disabled state. Each button is a single element carrying one class; no wrapper markup is required.</p>
 
       <div class="tw-demo-block">
         <div class="tw-demo-block__stage">
@@ -108,7 +133,7 @@
 
     <section id="badges" style="margin-top:56px">
       <h2>Badges &amp; chips</h2>
-      <p class="tw-text-muted">Status pills for tables and headers; chips double as filter toggles.</p>
+      <p class="tw-text-muted">Badges indicate status in tables and headers. Chips operate as filter toggles and expose their state through <code>aria-pressed</code>.</p>
 
       <div class="tw-demo-block">
         <div class="tw-demo-block__stage">
@@ -134,7 +159,7 @@
 
     <section id="cards" style="margin-top:56px">
       <h2>Cards</h2>
-      <p class="tw-text-muted">The workhorse container. Add <code>--interactive</code> for hover lift, <code>--flush</code> for edge-to-edge media.</p>
+      <p class="tw-text-muted">The primary container for grouped content. Add <code>--interactive</code> for a hover elevation, or <code>--flush</code> for edge-to-edge media.</p>
 
       <div class="tw-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
 
@@ -146,7 +171,7 @@
               <div class="tw-text-xs tw-text-dim">Analytics</div>
             </div>
           </div>
-          <p class="tw-text-sm" style="margin:0">Ship dashboards your team actually reads. Charts, filters and exports included.</p>
+          <p class="tw-text-sm" style="margin:0">A dashboard layout with charts, filters and export controls.</p>
         </article>
 
         <article class="tw-card tw-card--flush tw-card--interactive">
@@ -179,7 +204,7 @@
 
     <section id="forms" style="margin-top:56px">
       <h2>Form controls</h2>
-      <p class="tw-text-muted">Native inputs styled with tokens — keyboard, autofill and password managers keep working.</p>
+      <p class="tw-text-muted">Native inputs styled through design tokens, so keyboard navigation, autofill and password managers continue to work.</p>
 
       <div class="tw-grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
 
@@ -251,7 +276,7 @@
 
     <section id="avatars" style="margin-top:56px">
       <h2>Avatars</h2>
-      <p class="tw-text-muted">Initials fall back automatically; drop in an <code>&lt;img&gt;</code> for photos.</p>
+      <p class="tw-text-muted">Initials are generated automatically when no image is supplied; use an <code>&lt;img&gt;</code> for photographs.</p>
       <div class="tw-demo-block">
         <div class="tw-demo-block__stage">
           <span class="tw-avatar tw-avatar--sm">SM</span>
@@ -271,7 +296,7 @@
 
     <section id="tables" style="margin-top:56px">
       <h2>Tables</h2>
-      <p class="tw-text-muted">Semantic markup, horizontal scroll on narrow screens, hover rows.</p>
+      <p class="tw-text-muted">Semantic table markup with horizontal scrolling on narrow viewports and a hover state on rows.</p>
       <div class="tw-table-wrap">
         <table class="tw-table">
           <thead>
@@ -352,7 +377,7 @@
 
     <section id="modals" style="margin-top:56px">
       <h2>Modals</h2>
-      <p class="tw-text-muted">Focus trap on open, Escape to close, click-backdrop to dismiss.</p>
+      <p class="tw-text-muted">Keyboard focus is trapped while the dialog is open. Escape closes it, and clicking the backdrop dismisses it.</p>
       <div class="tw-demo-block">
         <div class="tw-demo-block__stage">
           <button class="tw-btn tw-btn--primary" data-tw-modal-open="signup-modal">Open modal</button>
@@ -396,7 +421,7 @@
 
     <section id="tokens" style="margin-top:56px">
       <h2>Color tokens</h2>
-      <p class="tw-text-muted">Ten brand steps, an accent, four semantic hues and an eleven-step neutral ramp. Semantic aliases sit on top so components never reference a raw hex value.</p>
+      <p class="tw-text-muted">Ten brand steps, one accent, four semantic hues and an eleven-step neutral ramp. Components reference semantic aliases rather than raw values.</p>
       <div class="tw-grid" style="grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px">
         <div><div style="height:56px;border-radius:10px;background:var(--tw-primary-500);border:1px solid var(--tw-border)"></div><div class="tw-text-xs tw-text-dim" style="margin-top:6px">primary-500</div></div>
         <div><div style="height:56px;border-radius:10px;background:var(--tw-primary-300);border:1px solid var(--tw-border)"></div><div class="tw-text-xs tw-text-dim" style="margin-top:6px">primary-300</div></div>
@@ -411,7 +436,7 @@
 
     <section id="theming" style="margin-top:56px">
       <h2>Theming</h2>
-      <p class="tw-text-muted">Every component reads semantic tokens. To rebrand, override the aliases in <code>tokens.css</code> — no component file needs to change.</p>
+      <p class="tw-text-muted">Components consume semantic tokens only. To rebrand the kit, override the aliases in <code>tokens.css</code>; no component file requires changes.</p>
       <div class="tw-card" style="background:var(--tw-gray-950);border-color:#22304a;overflow-x:auto">
         <pre style="margin:0;color:#c9d6ea;font-size:13px;line-height:1.7"><code><span style="color:#6b7f9e">/* override the whole kit with 5 lines */</span>
 <span style="color:#8eb5ff">:root</span> {
@@ -427,11 +452,11 @@
 
     <section id="get" style="margin-top:72px">
       <div class="tw-card" style="text-align:center;padding:48px 32px;background:linear-gradient(135deg,var(--tw-primary-50),#e6f7f3);border-color:var(--tw-primary-200)">
-        <h2 style="margin-bottom:12px">Ship a product UI this week.</h2>
-        <p class="tw-text-muted" style="max-width:52ch;margin:0 auto 28px">One purchase, unlimited projects. Includes all four page templates, the token file, and lifetime updates.</p>
+        <h2 style="margin-bottom:12px">Everything required for a product interface.</h2>
+        <p class="tw-text-muted" style="max-width:52ch;margin:0 auto 28px">A single purchase covers unlimited projects and includes all four page templates, the design token file and lifetime updates.</p>
         <div class="tw-row" style="justify-content:center">
-          <a class="tw-btn tw-btn--primary tw-btn--lg" href="pricing.html">Get Tidewave — $39</a>
-          <a class="tw-btn tw-btn--lg" href="dashboard.html">Browse templates</a>
+          <a class="tw-btn tw-btn--primary tw-btn--lg" href="pricing.html">Get Tidewave for $39</a>
+          <a class="tw-btn tw-btn--lg" href="dashboard.html">Review the templates</a>
         </div>
       </div>
     </section>
@@ -449,7 +474,7 @@
           </span>
           Tidewave
         </a>
-        <p class="tw-text-sm" style="max-width:32ch">A calm, dependency-free design system for product teams who'd rather ship than fight CSS.</p>
+        <p class="tw-text-sm" style="max-width:32ch">A dependency-free design system built on CSS custom properties, for teams building product interfaces in plain HTML and CSS.</p>
       </div>
       <div class="tw-footer__col">
         <h6>Product</h6>
@@ -481,7 +506,7 @@
     </div>
     <div class="tw-footer__bottom">
       <span>© 2025 Tidewave UI. All rights reserved.</span>
-      <span>Built with vanilla HTML, CSS and a little JavaScript.</span>
+      <span>Built with plain HTML, CSS and JavaScript.</span>
     </div>
   </div>
 </footer>
