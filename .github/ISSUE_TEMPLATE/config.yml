@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read the contributing guide first
+    url: https://github.com/ybxj-AAA/tidewave-ui/blob/main/CONTRIBUTING.md
+    about: It explains what gets accepted and what doesn't, and why.
+  - name: Read the security notes
+    url: https://github.com/ybxj-AAA/tidewave-ui/blob/main/SECURITY.md
+    about: What the risk surface of a static template actually is.
