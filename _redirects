@@ -1,0 +1,6 @@
+# Cloudflare Pages redirects.
+# Serves 404.html for any unknown route with a real 404 status.
+
+/scripts/* /404.html 404
+
+/* /404.html 404

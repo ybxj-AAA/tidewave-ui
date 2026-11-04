@@ -1,0 +1,33 @@
+# Dependencies (there shouldn't be any, but just in case)
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs and temp
+*.log
+npm-debug.log*
+.tmp/
+dist/
+.cache/
+
+# Coverage / test output
+coverage/
+test-results/
+
+# Local environment
+.env
+.env.local
+.env.*.local
