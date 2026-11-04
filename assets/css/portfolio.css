@@ -133,3 +133,7 @@
   background: radial-gradient(70% 130% at 50% 0%, var(--tw-primary-50), transparent 70%), var(--tw-surface);
 }
 [data-theme="dark"] .tw-contact { background: radial-gradient(70% 130% at 50% 0%, rgba(51,102,255,.2), transparent 70%), var(--tw-surface); }
+
+
+/* Generated preview artwork inside the case-study thumbnails */
+.tw-work__art { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
