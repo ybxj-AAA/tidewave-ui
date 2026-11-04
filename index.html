@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tidewave UI — component gallery</title>
+<title>Tidewave UI — components and page templates</title>
 <meta name="description" content="A dependency-free HTML/CSS component library: 18 components, design tokens, light and dark themes. No build step, no dependencies.">
 <link rel="canonical" href="https://ybxj-aaa.github.io/tidewave-ui/">
 <meta name="theme-color" content="#3366ff">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tidewave UI">
-<meta property="og:title" content="Tidewave UI — component gallery">
+<meta property="og:title" content="Tidewave UI — components and page templates">
 <meta property="og:description" content="18 components, design tokens, light and dark themes. No build step, no dependencies.">
 <meta property="og:url" content="https://ybxj-aaa.github.io/tidewave-ui/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tidewave UI — component gallery">
+<meta name="twitter:title" content="Tidewave UI — components and page templates">
 <meta name="twitter:description" content="18 components, design tokens, light and dark themes. No build step.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%233366ff%22 stroke-width=%222.4%22 stroke-linecap=%22round%22><path d=%22M3 12c2.5-4 5-4 7.5 0s5 4 7.5 0%22/><path d=%22M3 17c2.5-4 5-4 7.5 0s5 4 7.5 0%22 opacity=%22.55%22/></svg>">
 <link rel="stylesheet" href="assets/css/tokens.css">
@@ -59,12 +59,117 @@
 <!-- ============ HERO ============ -->
 <section class="tw-page-hero">
   <div class="tw-container">
-    <span class="tw-badge tw-badge--brand"><span class="tw-badge__dot"></span>v1.0 · 18 components · 0 dependencies</span>
-    <h1 style="margin-top:16px">A component library that gets out of the way.</h1>
-    <p>Tidewave is static HTML and CSS built on custom properties. Copy the folder, open a page, edit the markup. Re-theming the whole kit means editing one file.</p>
+    <span class="tw-badge tw-badge--brand"><span class="tw-badge__dot"></span>Version 1.0 · 18 components · 5 page templates</span>
+    <h1 style="margin-top:16px">Components and page templates for product interfaces.</h1>
+    <p>Tidewave is a static HTML and CSS library built on custom properties. It ships eighteen components, five page templates and a validator, with no build step and no dependencies. Copy the folder, open a page and edit the markup; every value that affects appearance lives in a single token file.</p>
     <div class="tw-row" style="margin-top:28px">
       <a class="tw-btn tw-btn--primary tw-btn--lg" href="#get">See what's included</a>
       <a class="tw-btn tw-btn--lg" href="dashboard.html">Open a page sample</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAGE TEMPLATES ============ -->
+<section class="tw-section" style="padding-block:48px 8px">
+  <div class="tw-container">
+    <div class="tw-row" style="justify-content:space-between;align-items:flex-end;margin-bottom:24px">
+      <div>
+        <span class="tw-eyebrow">Page templates</span>
+        <h2 style="margin-bottom:6px">Four complete screens, built from the same parts</h2>
+        <p class="tw-text-muted" style="margin:0">Each template uses the shared tokens and components. Open one, replace the content, publish.</p>
+      </div>
+      <a class="tw-btn tw-btn--sm" href="pricing.html">Compare the licence</a>
+    </div>
+    <div class="tw-grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+      <a class="tw-card tw-card--flush tw-card--interactive" href="dashboard.html" style="text-decoration:none;color:inherit">
+        <div style="background:linear-gradient(135deg,#f4f6fa,#e8efff);border-bottom:1px solid var(--tw-border)">
+          <svg viewBox="0 0 320 180" style="display:block;width:100%;height:auto" aria-hidden="true">
+              <rect x="18" y="16" width="284" height="148" rx="8" fill="#fff"/>
+              <rect x="18" y="16" width="60" height="148" rx="8" fill="#eef1f6"/>
+              <rect x="28" y="30" width="40" height="6" rx="3" fill="#c2cbd9"/>
+              <rect x="28" y="44" width="32" height="6" rx="3" fill="#d7dde7"/>
+              <rect x="28" y="58" width="36" height="6" rx="3" fill="#d7dde7"/>
+              <rect x="90" y="28" width="60" height="30" rx="5" fill="#f4f6fa"/>
+              <rect x="158" y="28" width="60" height="30" rx="5" fill="#f4f6fa"/>
+              <rect x="226" y="28" width="62" height="30" rx="5" fill="#e8efff"/>
+              <rect x="90" y="70" width="198" height="80" rx="5" fill="#f4f6fa"/>
+              <rect x="104" y="118" width="14" height="24" rx="2" fill="#bcd3ff"/>
+              <rect x="126" y="104" width="14" height="38" rx="2" fill="#8eb5ff"/>
+              <rect x="148" y="112" width="14" height="30" rx="2" fill="#bcd3ff"/>
+              <rect x="170" y="92" width="14" height="50" rx="2" fill="#3366ff"/>
+              <rect x="192" y="100" width="14" height="42" rx="2" fill="#8eb5ff"/>
+              <rect x="214" y="84" width="14" height="58" rx="2" fill="#3366ff"/>
+              <rect x="236" y="108" width="14" height="34" rx="2" fill="#bcd3ff"/>
+          </svg>
+        </div>
+        <div style="padding:var(--tw-space-5)">
+          <h5 style="margin:0 0 6px">Dashboard</h5>
+          <p class="tw-text-sm tw-text-muted" style="margin:0">Sidebar navigation, four metric cards, revenue chart, traffic breakdown and a transactions table.</p>
+        </div>
+      </a>
+      <a class="tw-card tw-card--flush tw-card--interactive" href="portfolio.html" style="text-decoration:none;color:inherit">
+        <div style="background:linear-gradient(135deg,#f4f6fa,#e8efff);border-bottom:1px solid var(--tw-border)">
+          <svg viewBox="0 0 320 180" style="display:block;width:100%;height:auto" aria-hidden="true">
+              <rect x="18" y="16" width="284" height="148" rx="8" fill="#fff"/>
+              <rect x="30" y="28" width="80" height="52" rx="5" fill="#8eb5ff"/>
+              <rect x="120" y="28" width="80" height="52" rx="5" fill="#4dd6c1"/>
+              <rect x="210" y="28" width="80" height="52" rx="5" fill="#ffc861"/>
+              <rect x="30" y="90" width="80" height="52" rx="5" fill="#ff7a7a"/>
+              <rect x="120" y="90" width="80" height="52" rx="5" fill="#3366ff"/>
+              <rect x="210" y="90" width="80" height="52" rx="5" fill="#4ade80"/>
+              <rect x="30" y="150" width="66" height="6" rx="3" fill="#d7dde7"/>
+          </svg>
+        </div>
+        <div style="padding:var(--tw-space-5)">
+          <h5 style="margin:0 0 6px">Portfolio</h5>
+          <p class="tw-text-sm tw-text-muted" style="margin:0">Case-study grid with inline preview artwork, a career timeline and a contact section.</p>
+        </div>
+      </a>
+      <a class="tw-card tw-card--flush tw-card--interactive" href="landing.html" style="text-decoration:none;color:inherit">
+        <div style="background:linear-gradient(135deg,#f4f6fa,#e8efff);border-bottom:1px solid var(--tw-border)">
+          <svg viewBox="0 0 320 180" style="display:block;width:100%;height:auto" aria-hidden="true">
+              <rect x="18" y="16" width="284" height="148" rx="8" fill="#fff"/>
+              <rect x="30" y="30" width="120" height="10" rx="5" fill="#c2cbd9"/>
+              <rect x="30" y="48" width="150" height="7" rx="3.5" fill="#d7dde7"/>
+              <rect x="30" y="62" width="132" height="7" rx="3.5" fill="#d7dde7"/>
+              <rect x="30" y="80" width="58" height="18" rx="9" fill="#3366ff"/>
+              <rect x="96" y="80" width="48" height="18" rx="9" fill="#eef1f6"/>
+              <rect x="30" y="112" width="80" height="44" rx="5" fill="#f4f6fa"/>
+              <rect x="118" y="112" width="80" height="44" rx="5" fill="#f4f6fa"/>
+              <rect x="206" y="112" width="80" height="44" rx="5" fill="#f4f6fa"/>
+          </svg>
+        </div>
+        <div style="padding:var(--tw-space-5)">
+          <h5 style="margin:0 0 6px">Landing page</h5>
+          <p class="tw-text-sm tw-text-muted" style="margin:0">Hero, feature grid, split sections, testimonial slot, FAQ and a closing call to action.</p>
+        </div>
+      </a>
+      <a class="tw-card tw-card--flush tw-card--interactive" href="pricing.html" style="text-decoration:none;color:inherit">
+        <div style="background:linear-gradient(135deg,#f4f6fa,#e8efff);border-bottom:1px solid var(--tw-border)">
+          <svg viewBox="0 0 320 180" style="display:block;width:100%;height:auto" aria-hidden="true">
+              <rect x="18" y="16" width="284" height="148" rx="8" fill="#fff"/>
+              <rect x="30" y="28" width="78" height="124" rx="6" fill="#f4f6fa"/>
+              <rect x="122" y="22" width="78" height="136" rx="6" fill="#eef4ff" stroke="#bcd3ff"/>
+              <rect x="214" y="28" width="78" height="124" rx="6" fill="#f4f6fa"/>
+              <rect x="40" y="40" width="34" height="6" rx="3" fill="#c2cbd9"/>
+              <rect x="40" y="54" width="44" height="12" rx="3" fill="#8eb5ff"/>
+              <rect x="132" y="34" width="34" height="6" rx="3" fill="#8eb5ff"/>
+              <rect x="132" y="48" width="52" height="14" rx="3" fill="#3366ff"/>
+              <rect x="224" y="40" width="34" height="6" rx="3" fill="#c2cbd9"/>
+              <rect x="224" y="54" width="44" height="12" rx="3" fill="#8eb5ff"/>
+              <rect x="40" y="84" width="58" height="5" rx="2.5" fill="#d7dde7"/>
+              <rect x="40" y="96" width="52" height="5" rx="2.5" fill="#d7dde7"/>
+              <rect x="132" y="80" width="58" height="5" rx="2.5" fill="#bcd3ff"/>
+              <rect x="132" y="92" width="52" height="5" rx="2.5" fill="#bcd3ff"/>
+              <rect x="224" y="84" width="58" height="5" rx="2.5" fill="#d7dde7"/>
+              <rect x="224" y="96" width="52" height="5" rx="2.5" fill="#d7dde7"/>
+          </svg>
+        </div>
+        <div style="padding:var(--tw-space-5)">
+          <h5 style="margin:0 0 6px">Pricing</h5>
+          <p class="tw-text-sm tw-text-muted" style="margin:0">Three plan cards, a full comparison table and an FAQ written for a one-time purchase.</p>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -508,7 +613,7 @@
       </div>
     </div>
     <div class="tw-footer__bottom">
-      <span>© 2025 Tidewave UI. Sample content.</span>
+      <span>© 2026 Tidewave UI. Sample content.</span>
       <span>Built with HTML, CSS and a little JavaScript.</span>
     </div>
   </div>
