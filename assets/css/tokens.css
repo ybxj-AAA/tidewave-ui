@@ -1,6 +1,6 @@
 /* ============================================================
    Tidewave UI — Design Tokens
-   Single source of truth for color, type, space, radius, shadow.
+   Single source of truth for colour, type, space, radius, shadow.
    Override any token to re-theme the whole kit.
    ============================================================ */
 
@@ -61,6 +61,43 @@
   --tw-brand:      var(--tw-primary-500);
   --tw-brand-hover:var(--tw-primary-600);
   --tw-brand-ink:  var(--tw-primary-600);
+
+  /* ---------- Utility tokens used by components ---------- */
+  --tw-on-solid:   var(--tw-gray-0);      /* text on a filled/dark surface */
+  --tw-solid:      var(--tw-gray-900);    /* solid dark surface (tooltips) */
+  --tw-tooltip-ink:var(--tw-gray-0);
+
+  --tw-media-tile: #c8f2e9;               /* second stop in the card media gradient */
+  --tw-media-deep: #0d1626;               /* dark-theme card media base */
+
+  --tw-track:      var(--tw-gray-300);    /* switch / progress track */
+  --tw-skeleton-a: var(--tw-gray-100);
+  --tw-skeleton-b: var(--tw-gray-200);
+
+  /* Semantic status surfaces — light theme */
+  --tw-success-bg:  #e8f8ee;
+  --tw-success-ink: #157347;
+  --tw-success-line:#c6ebd5;
+  --tw-warning-bg:  #fff5e3;
+  --tw-warning-ink: #96620b;
+  --tw-warning-line:#fbe3ba;
+  --tw-danger-bg:   #fdecef;
+  --tw-danger-ink:  #b4253f;
+  --tw-danger-line: #f8ccd5;
+
+  /* Dark-theme surfaces for the track / skeleton / switch */
+  --tw-track-dark:  #34425c;
+  --tw-progress-dark:#22304a;
+  --tw-skeleton-dark-a: #1a2740;
+  --tw-skeleton-dark-b: #22304a;
+
+  /* Accent ink used in dark-theme status pills */
+  --tw-success-ink-dark: #6ee7a0;
+  --tw-warning-ink-dark: #fbbf24;
+  --tw-danger-ink-dark:  #fb7185;
+  --tw-success-solid:    #16a34a;
+  --tw-warning-solid:    #f59e0b;
+  --tw-danger-solid:     #f43f5e;
 
   /* ---------- Typography ---------- */
   --tw-font-sans: "Inter", "Segoe UI", "PingFang SC", "Hiragino Sans GB",
