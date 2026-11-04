@@ -1,0 +1,157 @@
+/* ============================================================
+   Tidewave UI — Design Tokens
+   Single source of truth for color, type, space, radius, shadow.
+   Override any token to re-theme the whole kit.
+   ============================================================ */
+
+:root {
+  /* ---------- Brand palette ---------- */
+  --tw-primary-50:  #eef4ff;
+  --tw-primary-100: #dbe7ff;
+  --tw-primary-200: #bcd3ff;
+  --tw-primary-300: #8eb5ff;
+  --tw-primary-400: #5a8dff;
+  --tw-primary-500: #3366ff;
+  --tw-primary-600: #1f4de0;
+  --tw-primary-700: #173bb3;
+  --tw-primary-800: #13308c;
+  --tw-primary-900: #0f2569;
+
+  --tw-accent-400: #4dd6c1;
+  --tw-accent-500: #17b8a0;
+  --tw-accent-600: #0f9385;
+
+  --tw-danger-400:  #ff7a7a;
+  --tw-danger-500:  #f43f5e;
+  --tw-danger-600:  #d92a4a;
+
+  --tw-warning-400: #ffc861;
+  --tw-warning-500: #f59e0b;
+  --tw-success-400: #4ade80;
+  --tw-success-500: #16a34a;
+
+  /* ---------- Neutral ramp ---------- */
+  --tw-gray-0:   #ffffff;
+  --tw-gray-25:  #fcfcfd;
+  --tw-gray-50:  #f7f8fa;
+  --tw-gray-100: #f0f2f5;
+  --tw-gray-200: #e4e7ec;
+  --tw-gray-300: #d0d5dd;
+  --tw-gray-400: #98a2b3;
+  --tw-gray-500: #667085;
+  --tw-gray-600: #475467;
+  --tw-gray-700: #344054;
+  --tw-gray-800: #1d2939;
+  --tw-gray-900: #101828;
+  --tw-gray-950: #0b1220;
+
+  /* ---------- Semantic (light) ---------- */
+  --tw-bg:             var(--tw-gray-25);
+  --tw-bg-subtle:      var(--tw-gray-50);
+  --tw-surface:        var(--tw-gray-0);
+  --tw-surface-raised: var(--tw-gray-0);
+  --tw-border:         var(--tw-gray-200);
+  --tw-border-strong:  var(--tw-gray-300);
+
+  --tw-ink:        var(--tw-gray-900);
+  --tw-ink-2:      var(--tw-gray-600);
+  --tw-ink-3:      var(--tw-gray-500);
+  --tw-ink-invert: var(--tw-gray-0);
+
+  --tw-brand:      var(--tw-primary-500);
+  --tw-brand-hover:var(--tw-primary-600);
+  --tw-brand-ink:  var(--tw-primary-600);
+
+  /* ---------- Typography ---------- */
+  --tw-font-sans: "Inter", "Segoe UI", "PingFang SC", "Hiragino Sans GB",
+                  "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  --tw-font-mono: "JetBrains Mono", "SFMono-Regular", ui-monospace,
+                  "Cascadia Code", Consolas, monospace;
+
+  --tw-text-xs:   0.75rem;   /* 12 */
+  --tw-text-sm:   0.875rem;  /* 14 */
+  --tw-text-base: 1rem;      /* 16 */
+  --tw-text-lg:   1.125rem;  /* 18 */
+  --tw-text-xl:   1.375rem;  /* 22 */
+  --tw-text-2xl:  1.75rem;   /* 28 */
+  --tw-text-3xl:  2.25rem;   /* 36 */
+  --tw-text-4xl:  3rem;      /* 48 */
+  --tw-text-5xl:  3.75rem;   /* 60 */
+
+  --tw-leading-tight: 1.2;
+  --tw-leading-snug:  1.4;
+  --tw-leading-body:  1.65;
+
+  --tw-tracking-tight: -0.02em;
+  --tw-tracking-wide:   0.06em;
+
+  /* ---------- Spacing (4px base) ---------- */
+  --tw-space-1: 0.25rem;
+  --tw-space-2: 0.5rem;
+  --tw-space-3: 0.75rem;
+  --tw-space-4: 1rem;
+  --tw-space-5: 1.25rem;
+  --tw-space-6: 1.5rem;
+  --tw-space-8: 2rem;
+  --tw-space-10: 2.5rem;
+  --tw-space-12: 3rem;
+  --tw-space-16: 4rem;
+  --tw-space-20: 5rem;
+  --tw-space-24: 6rem;
+
+  /* ---------- Radius ---------- */
+  --tw-radius-sm: 8px;
+  --tw-radius-md: 12px;
+  --tw-radius-lg: 16px;
+  --tw-radius-xl: 24px;
+  --tw-radius-full: 999px;
+
+  /* ---------- Shadow ---------- */
+  --tw-shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --tw-shadow-sm: 0 1px 3px rgba(16, 24, 40, 0.08),
+                  0 1px 2px rgba(16, 24, 40, 0.04);
+  --tw-shadow-md: 0 4px 12px -2px rgba(16, 24, 40, 0.10),
+                  0 2px 6px -2px rgba(16, 24, 40, 0.06);
+  --tw-shadow-lg: 0 12px 32px -8px rgba(16, 24, 40, 0.16),
+                  0 4px 12px -4px rgba(16, 24, 40, 0.08);
+  --tw-shadow-glow: 0 0 0 1px rgba(51, 102, 255, 0.16),
+                    0 12px 40px -12px rgba(51, 102, 255, 0.55);
+
+  /* ---------- Motion ---------- */
+  --tw-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --tw-dur-fast: 140ms;
+  --tw-dur: 220ms;
+  --tw-dur-slow: 420ms;
+
+  /* ---------- Layout ---------- */
+  --tw-container: 1160px;
+  --tw-header-h: 64px;
+}
+
+/* ============================================================
+   Dark theme — opt in with data-theme="dark" on <html> or any
+   container element.
+   ============================================================ */
+[data-theme="dark"] {
+  --tw-bg:             var(--tw-gray-950);
+  --tw-bg-subtle:      #0f172a;
+  --tw-surface:        #111c31;
+  --tw-surface-raised: #16233c;
+  --tw-border:         #22304a;
+  --tw-border-strong:  #31425f;
+
+  --tw-ink:        #eef2f8;
+  --tw-ink-2:      #a9b6ca;
+  --tw-ink-3:      #8494ab;
+  --tw-ink-invert: var(--tw-gray-950);
+
+  --tw-brand:       var(--tw-primary-400);
+  --tw-brand-hover: var(--tw-primary-300);
+  --tw-brand-ink:   var(--tw-primary-300);
+
+  --tw-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.45);
+  --tw-shadow-md: 0 4px 14px -2px rgba(0, 0, 0, 0.55);
+  --tw-shadow-lg: 0 16px 44px -10px rgba(0, 0, 0, 0.68);
+  --tw-shadow-glow: 0 0 0 1px rgba(90, 141, 255, 0.30),
+                    0 16px 48px -14px rgba(51, 102, 255, 0.75);
+}
