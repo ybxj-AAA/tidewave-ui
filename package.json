@@ -1,0 +1,42 @@
+{
+  "name": "tidewave-ui",
+  "version": "1.0.0",
+  "description": "A static HTML/CSS component library: 18 components, design tokens, light and dark themes.",
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "*.html",
+    "assets/",
+    "robots.txt",
+    "sitemap.xml",
+    "manifest.webmanifest",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "serve": "node scripts/serve.mjs",
+    "test": "node scripts/check.mjs"
+  },
+  "keywords": [
+    "design-system",
+    "css",
+    "html",
+    "templates",
+    "ui-kit",
+    "dark-mode"
+  ],
+  "author": "ybxj-AAA",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ybxj-AAA/tidewave-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ybxj-AAA/tidewave-ui/issues"
+  },
+  "homepage": "https://github.com/ybxj-AAA/tidewave-ui#readme"
+}

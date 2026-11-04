@@ -1,0 +1,10 @@
+# Tidewave UI — robots.txt
+# Sample content. Adjust the sitemap URL if you fork this.
+
+User-agent: *
+Allow: /
+
+# Nothing here is private, but the checker script is noise for crawlers.
+Disallow: /scripts/
+
+Sitemap: https://ybxj-aaa.github.io/tidewave-ui/sitemap.xml

@@ -1,0 +1,42 @@
+# Catch merge conflicts that commit conflict markers, and oversized files.
+name: Hygiene
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  file-hygiene:
+    name: File hygiene
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for merge conflict markers
+        run: |
+          if git grep -nE '^(<<<<<<<|>>>>>>>|=======$)' -- \
+              ':!*.yml' ':!*.yaml' ':!*.md' ':!scripts/*'; then
+            echo "::error::Merge conflict markers found in source files"
+            exit 1
+          fi
+
+      - name: Check for oversized files
+        run: |
+          limit=$((2 * 1024 * 1024))
+          found=0
+          while IFS= read -r f; do
+            size=$(stat -c%s "$f")
+            if [ "$size" -gt "$limit" ]; then
+              echo "::error file=$f::File is larger than 2MB ($size bytes)"
+              found=1
+            fi
+          done < <(git ls-files)
+          exit $found
+
+      - name: Check for trailing whitespace
+        run: |
+          git grep -nI ' $' -- '*.html' '*.css' '*.js' '*.mjs' || \
+            echo "No trailing whitespace found."

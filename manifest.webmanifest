@@ -1,0 +1,19 @@
+{
+  "name": "Tidewave UI",
+  "short_name": "Tidewave",
+  "description": "A static HTML/CSS component library: 18 components, design tokens, light and dark themes.",
+  "start_url": "/tidewave-ui/",
+  "scope": "/tidewave-ui/",
+  "display": "browser",
+  "background_color": "#fcfcfd",
+  "theme_color": "#3366ff",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233366ff' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M3 12c2.5-4 5-4 7.5 0s5 4 7.5 0'/%3E%3Cpath d='M3 17c2.5-4 5-4 7.5 0s5 4 7.5 0' opacity='.55'/%3E%3C/svg%3E",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

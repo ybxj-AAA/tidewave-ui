@@ -1,119 +1,175 @@
 # Tidewave UI
 
-A calm, dependency-free design system for product teams — **24 design tokens, 18 components, light + dark themes, and 5 ready-made page templates.**
+A static HTML/CSS component library: **18 components, design tokens, light and dark themes, 5 page templates.** No build step, no dependencies, no JavaScript framework.
 
-Built with plain HTML, CSS custom properties and ~180 lines of vanilla JavaScript. No build step, no framework, no `node_modules`. Open an HTML file and it works.
+What this is not: a product, a hosting service, or a design tool. It's a folder of files you copy and edit.
 
 ```bash
 git clone https://github.com/ybxj-AAA/tidewave-ui.git
 cd tidewave-ui
-# open index.html in any browser — that's it
+# open index.html in a browser — that's the whole install
 ```
 
 ---
 
-## What's included
+## Pages
 
-| Template | Preview | Description |
-|---|---|---|
-| **Components** | `index.html` | The full component gallery — every element with usage notes and a scroll-nav. |
-| **Dashboard** | `dashboard.html` | App shell: sidebar, top bar, stat cards, bar chart, donut, data table, activity feed. |
-| **Portfolio** | `portfolio.html` | Personal portfolio: hero, skills marquee, case-study grid, timeline, contact. |
-| **SaaS Landing** | `landing.html` | Marketing page: hero, logo wall, feature grid, two split sections, testimonial, FAQ, CTA. |
-| **Pricing** | `pricing.html` | Three-tier pricing, comparison table, license FAQ, trust row. |
+| File | What it shows |
+|---|---|
+| `index.html` | Component gallery — every element with the class names that produce it |
+| `dashboard.html` | App shell: sidebar, stat cards, bar chart, donut, table, activity feed |
+| `portfolio.html` | Portfolio layout: hero, case-study grid, timeline, contact form |
+| `landing.html` | Marketing page: hero, feature grid, split sections, FAQ, CTA |
+| `pricing.html` | Three-tier pricing, comparison table, license FAQ |
+| `404.html` | Not-found page, styled to match |
 
-Every page shares the same token file, so they all re-theme together.
+All six share `tokens.css`, so a change to one file re-themes all of them.
+
+**Every number, name and project on these pages is sample data.** They're labelled where it matters, but they are not real customers or real metrics.
 
 ---
 
-## The component list
+## Components
 
-- **Buttons** — 6 variants × 3 sizes, icon slots, block + disabled states
-- **Badges & chips** — 5 semantic tones, togglable filter chips
-- **Cards** — plain, interactive, flush-with-media, header/desc/body slots
-- **Forms** — inputs, selects, textareas, input groups, custom checkboxes, toggle switches
-- **Avatars** — 4 sizes, initials fallback, stacked groups
-- **Tables** — semantic markup, scroll wrapper, hover rows
-- **Progress** — animated meter bars
-- **Alerts** — info / success / warning / danger
-- **Tabs** — accessible `role="tablist"` with panel swapping
-- **Modals** — backdrop blur, Escape to close, focus management
-- **Tooltips** — pure CSS, hover + keyboard focus
-- **Skeleton loaders** — shimmer placeholders
+| Group | Notes |
+|---|---|
+| Buttons | 6 variants × 3 sizes, icon slot, block and disabled states |
+| Badges & chips | 5 semantic tones; chips toggle via `aria-pressed` |
+| Cards | plain, interactive (hover lift), flush-with-media |
+| Forms | inputs, selects, textareas, input groups, custom checkboxes, switches |
+| Avatars | 4 sizes, initials fallback, stacked group |
+| Tables | scroll wrapper, hover rows |
+| Progress | bars animate on load via `data-value` |
+| Alerts | info / success / warning / danger |
+| Tabs | `role="tablist"`, panel swap, one small JS block |
+| Modals | backdrop blur, Escape to close, focus moves on open |
+| Tooltips | CSS only — `:hover` and `:focus-within` |
+| Skeletons | shimmer placeholders |
 
-Plus foundations: a 10-step brand palette, an 11-step neutral ramp, 4 semantic hues, a type scale, a 4px spacing scale, radii, 6 shadow levels and a motion system.
+Foundations: 10-step brand palette, 11-step neutral ramp, 4 semantic hues, type scale, 4px spacing scale, radii, 6 shadow levels, motion tokens.
 
 ---
 
 ## Theming
 
-Every component reads **semantic tokens only**. To rebrand the entire kit, override the aliases — no component file changes:
+Components reference semantic tokens only. Override the aliases; nothing else changes:
 
 ```css
 /* put this after tokens.css */
 :root {
-  --tw-brand:        #e8590c;   /* any hue */
-  --tw-brand-hover:  #c94a08;
-  --tw-brand-ink:    #c94a08;
-  --tw-radius-lg:    4px;       /* sharper corners */
+  --tw-brand:        #0f766e;
+  --tw-brand-hover:  #115e59;
+  --tw-brand-ink:    #115e59;
+  --tw-radius-lg:    6px;
   --tw-font-sans:    "IBM Plex Sans", sans-serif;
-  --tw-container:    1320px;    /* wider layout */
+  --tw-container:    1240px;
 }
 ```
 
-Dark mode is a second token set:
+Dark mode is a second token block in the same file, activated by an attribute:
 
 ```html
 <html data-theme="dark">
 ```
 
-The demo pages ship with a theme toggle that persists to `localStorage` and respects `prefers-color-scheme` on first visit.
+The pages ship with a toggle that persists to `localStorage` and falls back to `prefers-color-scheme` on first visit.
 
 ---
 
-## File structure
+## File layout
 
 ```
 tidewave-ui/
 ├── index.html              component gallery
-├── dashboard.html          app dashboard template
-├── portfolio.html          portfolio template
-├── landing.html            SaaS landing template
-├── pricing.html            pricing page template
+├── dashboard.html          dashboard sample
+├── portfolio.html          portfolio sample
+├── landing.html            marketing page sample
+├── pricing.html            pricing page sample
+├── 404.html                not-found page
 ├── assets/
 │   ├── css/
-│   │   ├── tokens.css      ← design tokens + dark theme (the single source of truth)
-│   │   ├── base.css        reset, typography, layout helpers
+│   │   ├── tokens.css      design tokens + dark theme (edit this one)
+│   │   ├── base.css        reset, type, layout helpers
 │   │   ├── components.css  the 18 components
 │   │   ├── site.css        nav, footer, docs layout
-│   │   ├── dashboard.css   dashboard-specific
-│   │   ├── portfolio.css   portfolio-specific
-│   │   ├── landing.css     landing-specific
-│   │   └── pricing.css     pricing-specific
+│   │   ├── dashboard.css
+│   │   ├── portfolio.css
+│   │   ├── landing.css
+│   │   └── pricing.css
 │   └── js/
 │       └── app.js          theme toggle, modals, tabs, toasts, scrollspy
+├── scripts/
+│   ├── check.mjs           dependency-free validator
+│   └── serve.mjs           local preview server
+├── .github/workflows/      CI: validate, then deploy to Pages
+├── robots.txt
+├── sitemap.xml
+├── manifest.webmanifest
+├── netlify.toml / vercel.json / _redirects
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── SECURITY.md
 ├── LICENSE
 └── README.md
 ```
 
 ---
 
+## Validation
+
+There's no bundler, but there is a checker. It runs with Node 18+ and installs nothing:
+
+```bash
+node scripts/check.mjs
+```
+
+It verifies:
+- every page's `<link>` and `<script>` assets exist on disk
+- every internal `href` points at a file that exists
+- `<div>`, `<section>` and friends are balanced per page
+- CSS files have balanced braces
+- every `<img>` has an `alt` attribute
+- no page is missing `canonical`, a `description`, `lang` or an `<h1>`
+- every JSON file parses
+- `sitemap.xml` points only at files that exist
+- the shared CSS files contain no raw hex colours
+
+The last one is the interesting rule: `components.css`, `base.css` and `site.css` must reference tokens, never literals. Template-specific files (`dashboard.css`, `portfolio.css`, …) are allowed decorative gradients, because those are illustration art rather than interface colour.
+
+## Local preview
+
+```bash
+node scripts/serve.mjs
+# http://127.0.0.1:4173/tidewave-ui/
+```
+
+It serves the repo under the same `/tidewave-ui/` prefix GitHub Pages uses, so absolute paths behave identically in development and production.
+
+## Deploying
+
+- **GitHub Pages** — the included workflow handles it; enable Pages with source "GitHub Actions".
+- **Netlify** — `netlify.toml` is ready: no build command, publish `.`.
+- **Vercel** — `vercel.json` is ready: no build, no framework.
+- **Cloudflare Pages** — `_redirects` is ready: build command empty, output `.`.
+
+All four include security headers and a cache policy.
+
+---
+
 ## Browser support
 
-Chrome / Edge 111+, Firefox 113+, Safari 16.4+. The only modern feature used is `color-mix()` in the sticky nav backdrop; everything else degrades cleanly.
+Chrome / Edge 111+, Firefox 113+, Safari 16.4+. The one modern feature is `color-mix()` in the sticky nav backdrop; on older browsers that bar falls back to a solid colour.
 
-Everything is keyboard navigable, `prefers-reduced-motion` is respected, and `:focus-visible` outlines are styled throughout.
-
----
-
-## License
-
-Selling or redistributing the kit itself is not permitted. See [LICENSE](LICENSE) for the exact terms.
+Keyboard navigation works, `:focus-visible` is styled, `prefers-reduced-motion` is respected. This has **not** been through a formal WCAG audit.
 
 ---
 
-## Built by
+## Licence
 
-**ybxj-AAA** — a small studio that got tired of fighting CSS.
+Sold under a commercial licence; reselling the kit itself is not permitted. Read [`LICENSE`](LICENSE) — it's short and written in plain language.
 
-If you build something with it, I'd genuinely like to see it.
+---
+
+## Who
+
+**ybxj-AAA**. Issues and typo fixes welcome. Feature requests will probably be declined, because the kit's selling point is that it stays small.
